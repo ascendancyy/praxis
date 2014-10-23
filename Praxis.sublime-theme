@@ -69,7 +69,7 @@
    // // // // // //
    {
       "class": "tabset_control",
-      "settings": ["Praxis_round_tabs"],
+      "settings": ["praxis_round_tabs"],
 
       "content_margin": [-6, 0, -6, 0],
 
@@ -79,14 +79,14 @@
    // Set aside space for the tab scrolling icons
    {
       "class": "tabset_control",
-      "settings": ["Praxis_round_tabs", "enable_tab_scrolling"],
+      "settings": ["praxis_round_tabs", "enable_tab_scrolling"],
 
       "content_margin": [6, 0, 6, 0]
    },
    // Default tab state
    {
       "class": "tab_control",
-      "settings": ["Praxis_round_tabs"],
+      "settings": ["praxis_round_tabs"],
 
       "hit_test_level": 0.5,
       "content_margin": [20, 10, 20, 4],
@@ -97,14 +97,14 @@
    // Show tab close button
    {
       "class": "tab_control",
-      "settings": ["Praxis_round_tabs", "show_tab_close_buttons"],
+      "settings": ["praxis_round_tabs", "show_tab_close_buttons"],
 
       "content_margin": [20, 10, 17, 4]
    },
    // Tab hover state
    {
       "class": "tab_control",
-      "settings": ["Praxis_round_tabs"],
+      "settings": ["praxis_round_tabs"],
       "attributes": ["hover"],
 
       "layer0.texture": "Theme - Praxis/assets/tabs/classic/hover.png"
@@ -112,7 +112,7 @@
    // Tab active state
    {
       "class": "tab_control",
-      "settings": ["Praxis_round_tabs"],
+      "settings": ["praxis_round_tabs"],
       "attributes": ["selected"],
 
       "layer0.texture": "Theme - Praxis/assets/tabs/classic/active.png"
