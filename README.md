@@ -48,6 +48,8 @@ Square tabs are used by default. If you'd prefer to use a curved tab style, add 
 
     "praxis_round_tabs": true
 
+![Praxis Tab Styles](https://raw.githubusercontent.com/ascendancyy/praxis/gh/images/screenshots/tab_preview.png)
+
 ## License
 
 And registration please.
