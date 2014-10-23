@@ -1,0 +1,1408 @@
+[
+   // // // // // //
+   // TABS (REGULAR)
+   // // // // // //
+   {
+      "class": "tabset_control",
+
+      "mouse_wheel_switch": false,
+      "content_margin": [-7, 0, -7, 0],  // Margins (ie. Space)
+
+      "tab_overlap": 13,  // Horizontal Overlap
+      "tab_width": 180,  // Preferred Width
+      "tab_min_width": 45,  // Minimum Width
+      "tab_height": 34,  // Preferred Height
+
+      "layer0.texture": "Theme - Praxis/assets/tabs/background.png",
+      "layer0.opacity": 1.0,
+      "layer0.inner_margin": 0  // No stretch area
+   },
+   // Set aside space for the tab scrolling icons
+   {
+      "class": "tabset_control",
+      "settings": ["enable_tab_scrolling"],
+
+      "content_margin": [6, 0, 6, 0]
+   },
+   {
+      "class": "tabset_control",
+      "settings": ["mouse_wheel_switches_tabs"],
+
+      "mouse_wheel_switch": true
+   },
+   // Default tab state
+   {
+      "class": "tab_control",
+
+      "max_margin_trim": 0,
+      "hit_test_level": 0.0,
+      "content_margin": [15, 0, 15, 1],
+
+      "layer0.texture": "Theme - Praxis/assets/tabs/inactive.png",
+      "layer0.inner_margin": [8, 4],
+      "layer0.opacity": 1.0
+   },
+   // Show tab close button
+   {
+      "class": "tab_control",
+      "settings": ["show_tab_close_buttons"],
+
+      "content_margin": [15, 0, 12, 1]
+   },
+   // Tab hover state
+   {
+      "class": "tab_control",
+      "attributes": ["hover"],
+
+      "layer0.texture": "Theme - Praxis/assets/tabs/hover.png"
+   },
+   // Tab selected state
+   {
+      "class": "tab_control",
+      "attributes": ["selected"],
+
+      "layer0.texture": "Theme - Praxis/assets/tabs/selected.png"
+   },
+
+   // // // // // //
+   // TABS (CLASSIC)
+   // // // // // //
+   {
+      "class": "tabset_control",
+      "settings": ["Praxis_round_tabs"],
+
+      "content_margin": [-6, 0, -6, 0],
+
+      "tab_overlap": 18,
+      "tab_height": 34
+   },
+   // Set aside space for the tab scrolling icons
+   {
+      "class": "tabset_control",
+      "settings": ["Praxis_round_tabs", "enable_tab_scrolling"],
+
+      "content_margin": [6, 0, 6, 0]
+   },
+   // Default tab state
+   {
+      "class": "tab_control",
+      "settings": ["Praxis_round_tabs"],
+
+      "hit_test_level": 0.5,
+      "content_margin": [20, 10, 20, 4],
+
+      "layer0.texture": "Theme - Praxis/assets/tabs/classic/inactive.png",
+      "layer0.inner_margin": [17, 8, 17, 4]
+   },
+   // Show tab close button
+   {
+      "class": "tab_control",
+      "settings": ["Praxis_round_tabs", "show_tab_close_buttons"],
+
+      "content_margin": [20, 10, 17, 4]
+   },
+   // Tab hover state
+   {
+      "class": "tab_control",
+      "settings": ["Praxis_round_tabs"],
+      "attributes": ["hover"],
+
+      "layer0.texture": "Theme - Praxis/assets/tabs/classic/hover.png"
+   },
+   // Tab active state
+   {
+      "class": "tab_control",
+      "settings": ["Praxis_round_tabs"],
+      "attributes": ["selected"],
+
+      "layer0.texture": "Theme - Praxis/assets/tabs/classic/active.png"
+   },
+
+   // // // // //
+   // TAB BUTTONS
+   // // // // //
+   {
+      "class": "tab_close_button",
+
+      "content_margin": [0, 0],
+
+      "layer0.texture": "Theme - Praxis/assets/tabs/close-inactive.png",
+      "layer0.opacity": 1.0,
+      "layer0.inner_margin": 0,
+
+      "layer1.texture": "Theme - Praxis/assets/tabs/dirty-inactive.png",
+      "layer1.opacity": 0.0,
+      "layer1.inner_margin": 0
+   },
+   // Enable Tab buttons
+   {
+      "class": "tab_close_button",
+      "settings": ["show_tab_close_buttons"],
+
+      "content_margin": [8, 8]
+   },
+   {
+      "class": "tab_close_button",
+      "parents": [{"class": "tab_control", "attributes": ["!dirty", "hover"]}],
+
+      "layer0.texture": "Theme - Praxis/assets/tabs/close.png",
+      "layer0.opacity": 1.0
+   },
+   {
+      "class": "tab_close_button",
+      "parents": [{"class": "tab_control", "attributes": ["!dirty", "selected"]}],
+
+      "layer0.texture": "Theme - Praxis/assets/tabs/close.png",
+      "layer0.opacity": 1.0
+   },
+   {
+      "class": "tab_close_button",
+      "parents": [{"class": "tab_control", "attributes": ["dirty"]}],
+
+      "layer0.opacity": 0.0,
+      "layer1.texture": "Theme - Praxis/assets/tabs/dirty-inactive.png",
+      "layer1.opacity": 1.0
+   },
+   {
+      "class": "tab_close_button",
+      "parents": [{"class": "tab_control", "attributes": ["dirty", "hover"]}],
+
+      "layer0.opacity": 0.0,
+      "layer1.texture": "Theme - Praxis/assets/tabs/dirty.png",
+      "layer1.opacity": 1.0
+   },
+   {
+      "class": "tab_close_button",
+      "parents": [{"class": "tab_control", "attributes": ["dirty", "selected"]}],
+
+      "layer0.opacity": 0.0,
+      "layer1.texture": "Theme - Praxis/assets/tabs/dirty.png",
+      "layer1.opacity": 1.0
+   },
+   {
+      "class": "tab_close_button",
+      "attributes": ["hover"],
+
+      "layer0.texture": "Theme - Praxis/assets/tabs/close-hover.png",
+      "layer0.opacity": 1.0,
+      "layer1.opacity": 0.0
+   },
+   {
+      "class": "tab_close_button",
+      "attributes": ["pressed"],
+
+      "layer0.texture": "Theme - Praxis/assets/tabs/close-pressed.png",
+      "layer0.opacity": 1.0,
+      "layer1.opacity": 0.0
+   },
+
+   // // // // //
+   // TAB LABELS
+   // // // // //
+   {
+      "class": "tab_label",
+
+      "fade": true, // Give me your Glock Fade
+
+      "fg": [105, 105, 99],
+      "font.italic": false,
+   },
+   {
+      "class": "tab_label",
+      "parents": [{"class": "tab_control", "attributes": ["hover"]}],
+
+      "fg": [213, 213, 207],
+   },
+   {
+      "class": "tab_label",
+      "parents": [{"class": "tab_control", "attributes": ["selected"]}],
+
+      "fg": [213, 213, 207],
+   },
+   // Highlight dirty tabs
+   {
+      "class": "tab_label",
+      "settings": ["highlight_modified_tabs"],
+      "parents": [{"class": "tab_control", "attributes": ["dirty"]}],
+
+      "fg": [204, 179, 116],
+   },
+   {
+      "class": "tab_label",
+      "settings": ["highlight_modified_tabs"],
+      "parents": [{"class": "tab_control", "attributes": ["dirty", "hover"]}],
+
+      "fg": [224, 191, 105],
+   },
+   {
+      "class": "tab_label",
+      "settings": ["highlight_modified_tabs"],
+      "parents": [{"class": "tab_control", "attributes": ["dirty", "selected"]}],
+
+      "fg": [224, 191, 105],
+   },
+   // Previewed Tab
+   {
+      "class": "tab_label",
+      "attributes": ["transient"],
+
+      "font.italic": true
+   },
+
+   // // // // // //
+   // TAB SCROLLING
+   // // // // // //
+   {
+      "class": "show_tabs_dropdown_button",
+
+      "content_margin": [11, 7, 10, 6],
+
+      "layer0.texture": "Theme - Praxis/assets/tabs/tabset-list.png",
+      "layer0.opacity": 1.0,
+      "layer0.inner_margin": 0
+   },
+   {
+      "class": "show_tabs_dropdown_button",
+      "attributes": ["hover"],
+
+      "layer0.texture": "Theme - Praxis/assets/tabs/tabset-list-hover.png"
+   },
+   // Tab scroll left
+   {
+      "class": "scroll_tabs_left_button",
+
+      "content_margin": [9, 7, 8, 6],
+
+      "layer0.texture": "Theme - Praxis/assets/tabs/tabset-left.png",
+      "layer0.opacity": 1.0,
+      "layer0.inner_margin": 0
+   },
+   {
+      "class": "scroll_tabs_left_button",
+      "attributes": ["hover"],
+
+      "layer0.texture": "Theme - Praxis/assets/tabs/tabset-left-hover.png"
+   },
+   // Tab scroll right
+   {
+      "class": "scroll_tabs_right_button",
+
+      "content_margin": [9, 7, 8, 6],
+
+      "layer0.texture": "Theme - Praxis/assets/tabs/tabset-right.png",
+      "layer0.opacity": 1.0,
+      "layer0.inner_margin": 0
+   },
+   {
+      "class": "scroll_tabs_right_button",
+      "attributes": ["hover"],
+
+      "layer0.texture": "Theme - Praxis/assets/tabs/tabset-right-hover.png"
+   },
+
+   // // // // //
+   // FOLD BUTTONS
+   // // // // //
+   {
+      "class": "fold_button_control",
+
+      "content_margin": [8, 8],
+
+      "layer0.texture": "Theme - Praxis/assets/gutter/fold-closed.png",
+      "layer0.opacity": 1.0,
+      "layer0.inner_margin": 0
+   },
+   {
+      "class": "fold_button_control",
+      "attributes": ["hover"],
+
+      "layer0.texture": "Theme - Praxis/assets/gutter/fold-closed-hover.png"
+   },
+   {
+      "class": "fold_button_control",
+      "attributes": ["expanded"],
+
+      "layer0.texture": "Theme - Praxis/assets/gutter/fold-open.png"
+   },
+   {
+      "class": "fold_button_control",
+      "attributes": ["expanded", "hover"],
+
+      "layer0.texture": "Theme - Praxis/assets/gutter/fold-open-hover.png"
+   },
+
+   // // // // // // // //
+   // STANDARD SCROLLBARS
+   // // // // // // // //
+   {
+      "class": "scroll_bar_control",
+
+      "blur": false,
+
+      "layer0.tint": [33, 33, 33],
+      "layer0.opacity": 1.0
+   },
+   // Corner
+   {
+      "class": "scroll_corner_control",
+
+      "layer0.tint": [33, 33, 33],
+      "layer0.opacity": 1.0,
+   },
+   // Vertical Puck
+   {
+      "class": "puck_control",
+
+      "blur": false,
+      "content_margin": [7, 0],
+
+      "layer0.texture": "Theme - Praxis/assets/scrollbar/standard/puck-vertical.png",
+      "layer0.opacity": 1.0,
+      "layer0.inner_margin": [0, 0, 2, 0]
+   },
+   // Horizontal puck
+   {
+      "class": "puck_control",
+      "attributes": ["horizontal"],
+
+      "blur": false,
+      "content_margin": [0, 7],
+
+      "layer0.texture": "Theme - Praxis/assets/scrollbar/standard/puck-horizontal.png",
+      "layer0.inner_margin": [0, 2, 0, 0]
+   },
+
+   // // // // // // //
+   // OVERLAY SCROLLBARS
+   // // // // // // //
+   {
+      "class": "scroll_area_control",
+      "settings": ["overlay_scroll_bars"],
+
+      "overlay": true
+   },
+   {
+      "class": "scroll_area_control",
+      "settings": ["!overlay_scroll_bars"],
+
+      "overlay": false
+   },
+   // Vertical
+   {
+      "class": "scroll_bar_control",
+      "settings": ["overlay_scroll_bars"],
+
+      "blur": true,
+
+      "layer0.texture": "Theme - Praxis/assets/scrollbar/overlay/scrollbar-vertical.png",
+      "layer0.inner_margin": [0, 5]
+   },
+   // Horizontal
+   {
+      "class": "scroll_bar_control",
+      "attributes": ["horizontal"],
+      "settings": ["overlay_scroll_bars"],
+
+      "blur": true,
+
+      "layer0.texture": "Theme - Praxis/assets/scrollbar/overlay/scrollbar-horizontal.png",
+      "layer0.inner_margin": [5, 0]
+   },
+   // Vertical puck
+   {
+      "class": "puck_control",
+      "settings": ["overlay_scroll_bars"],
+
+      "blur": true,
+      "content_margin": [5, 20],
+
+      "layer0.texture": "Theme - Praxis/assets/scrollbar/overlay/puck-vertical.png",
+      "layer0.inner_margin": [0, 5],
+   },
+   // Horizontal puck
+   {
+      "class": "puck_control",
+      "settings": ["overlay_scroll_bars"],
+      "attributes": ["horizontal"],
+
+      "blur": true,
+      "content_margin": [20, 5],
+
+      "layer0.texture": "Theme - Praxis/assets/scrollbar/overlay/puck-horizontal.png",
+      "layer0.inner_margin": [5, 0],
+   },
+   // Vertical light puck (for dark content)
+   {
+      "class": "puck_control",
+      "settings": ["overlay_scroll_bars"],
+      "attributes": ["dark"],
+
+      "layer0.texture": "Theme - Praxis/assets/scrollbar/overlay/dark-puck-vertical.png"
+   },
+   // Horizontal light puck (for dark content)
+   {
+      "class": "puck_control",
+      "settings": ["overlay_scroll_bars"],
+      "attributes": ["horizontal", "dark"],
+
+      "layer0.texture": "Theme - Praxis/assets/scrollbar/overlay/dark-puck-horizontal.png"
+   },
+
+   // // // // // // // // //
+   // EMPTY WINDOW BACKGROUND
+   // // // // // // // // //
+   {
+      "class": "sheet_container_control",
+
+      "layer0.tint": [33, 33, 33],
+      "layer0.opacity": 1.0
+   },
+
+   // // // // //
+   // GRID LAYOUT
+   // // // // //
+   {
+      "class": "grid_layout_control",
+
+      "border_size": 1,
+      "border_color": [225, 85, 137]
+   },
+
+   // // // //
+   // MINI MAP
+   // // // //
+   {
+      "class": "minimap_control",
+      "settings": ["always_show_minimap_viewport"],
+
+      "viewport_color": [255, 255, 255, 35],
+      "viewport_opacity": 1.0
+   },
+   {
+      "class": "minimap_control",
+      "settings": ["!always_show_minimap_viewport"],
+
+      "viewport_color": [255, 255, 255, 35],
+      "viewport_opacity": { "target": 0.0, "speed": 10.0, "interpolation": "smoothstep" }
+   },
+   {
+      "class": "minimap_control",
+      "attributes": ["hover"],
+      "settings": ["!always_show_minimap_viewport"],
+
+      "viewport_opacity": 1.0
+   },
+
+   // // //
+   // DIALOG
+   // // //
+   {
+      "class": "dialog",
+
+      "layer0.tint": [46, 46, 46],
+      "layer0.opacity": 1.0
+   },
+
+   // // // // //
+   // PROGRESS BAR
+   // // // // //
+   {
+      "class": "progress_bar_control",
+
+      "layer0.tint": [33, 33, 33],
+      "layer0.opacity": 1.0
+   },
+   {
+      "class": "progress_gauge_control",
+
+      "content_margin": [0, 6],
+
+      "layer0.tint": [59, 59, 59],
+      "layer0.opacity": 1.0
+   },
+
+   // // //
+   // LABELS
+   // // //
+   {
+      "class": "label_control",
+
+      "color": [213, 213, 207]
+   },
+   // Text field labels
+   {
+      "class": "label_control",
+      "parents": [{"class": "panel_control"}]
+   },
+   // Button labels
+   {
+      "class": "label_control",
+      "parents": [{"class": "button_control"}]
+   },
+
+   // // // //
+   // TOOLTIP
+   // // // //
+   {
+      "class": "tool_tip_control",
+
+      "content_margin": [4, 4],
+
+      "layer0.tint": [207, 65, 116],
+      "layer0.opacity": 1.0,
+   },
+   // Tooltip content
+   {
+      "class": "tool_tip_label_control",
+
+      "color": [213, 213, 207]
+   },
+
+   // // // // //
+   // STATUS BAR
+   // // // // //
+   {
+      "class": "status_bar",
+
+      "content_margin": [8, 4, 8, 4],
+
+      "layer0.texture": "Theme - Praxis/assets/panel/background.png",
+      "layer0.opacity": 1.0,
+      "layer0.inner_margin": [0, 1, 0, 0],
+   },
+   // Status bar button
+   {
+      "class": "status_button",
+
+      "min_size": [100, 0]
+   },
+   // Status bar label
+   {
+      "class": "label_control",
+      "parents": [{"class": "status_bar"}],
+
+      "color": [213, 213, 207]
+   },
+
+   // // // //
+   // SIDEBAR
+   // // // //
+   {
+      "class": "sidebar_container",
+
+      "content_margin": [0, 0, 1, 0],
+
+      "layer0.texture": "Theme - Praxis/assets/sidebar/background.png",
+      "layer0.opacity": 1.0,
+      "layer0.inner_margin": [0, 0, 1, 0]
+   },
+   // Sidebar tree
+   {
+      "class": "sidebar_tree",
+
+      "indent": 13,
+      "indent_offset": 14,
+      "indent_top_level": false,
+
+      "row_padding": [9, 5],
+      "dark_content": true
+   },
+   // Sidebar rows
+   {
+      "class": "tree_row",
+
+      "layer0.tint": [207, 65, 116],
+      "layer0.opacity": 0.0,
+   },
+   // Sidebar row selected
+   {
+      "class": "tree_row",
+      "attributes": ["selected"],
+
+      "layer0.opacity": 1.0
+   },
+   // Sidebar heading
+   {
+      "class": "sidebar_heading",
+
+      "font.bold": true,
+
+      "color": [213, 213, 207],
+   },
+   // Sidebar entry
+   {
+      "class": "sidebar_label",
+
+      "font.bold": false,
+      "font.italic": false,
+
+      "color": [176, 176, 170]
+   },
+   {
+      "class": "sidebar_label",
+      "parents": [{"class": "tree_row", "attributes": ["hover"]}],
+
+      "color": [213, 213, 207]
+   },
+   {
+      "class": "sidebar_label",
+      "parents": [{"class": "tree_row", "attributes": ["selected"]}],
+
+      "color": [213, 213, 207]
+   },
+   // Sidebar folder entry
+   {
+      "class": "sidebar_label",
+      "parents": [{"class": "tree_row", "attributes": ["expandable"]}],
+
+      "color": [189, 189, 183]
+   },
+   {
+      "class": "sidebar_label",
+      "settings": ["bold_folder_labels"],
+      "parents": [{"class": "tree_row", "attributes": ["expandable"]}],
+
+      "font.bold": true
+   },
+   {
+      "class": "sidebar_label",
+      "parents": [{"class": "tree_row", "attributes": ["expandable", "hover"]}],
+
+      "color": [213, 213, 207]
+   },
+   {
+      "class": "sidebar_label",
+      "parents": [{"class": "tree_row", "attributes": ["expandable", "selected"]}],
+
+      "color": [213, 213, 207]
+   },
+   // Sidebar entry transient
+   {
+      "class": "sidebar_label",
+      "attributes": ["transient"],
+
+      "font.italic": true
+   },
+
+   // // // // // // // // // //
+   // SIDEBAR - OPEN FILE ICONS
+   // // // // // // // // // //
+   // Sidebar file buttons
+   {
+      "class": "close_button",
+      "content_margin": [8, 8],
+
+      "layer0.texture": "Theme - Praxis/assets/sidebar/file-close.png",
+      "layer0.opacity": 0.0,
+      "layer0.inner_margin": 0,
+
+      "layer1.texture": "Theme - Praxis/assets/sidebar/file-dirty.png",
+      "layer1.opacity": 0.0,
+      "layer1.inner_margin": 0
+   },
+   // Hover over row not selected
+   {
+      "class": "close_button",
+      "parents": [{"class": "tree_row", "attributes": ["hover"]}],
+
+      "layer0.opacity": 1.0
+   },
+   // Hover over button
+   {
+      "class": "close_button",
+      "attributes": ["hover"],
+
+      "layer0.texture": "Theme - Praxis/assets/sidebar/file-close-hover.png",
+      "layer0.opacity": 1.0
+   },
+   // Hover over row selected
+   {
+      "class": "close_button",
+      "parents": [{"class": "tree_row", "attributes": ["hover", "selected"]}],
+
+      "layer0.texture": "Theme - Praxis/assets/sidebar/file-close-selected.png",
+   },
+   // Hover over button, row selected
+   {
+      "class": "close_button",
+      "attributes": ["hover"],
+      "parents": [{"class": "tree_row", "attributes": ["hover", "selected"]}],
+
+      "layer0.texture": "Theme - Praxis/assets/sidebar/file-close-selected-hover.png",
+   },
+   // Dirty button
+   {
+      "class": "close_button",
+      "attributes": ["dirty"],
+      "parents": [{"class": "tree_row", "attributes": ["!hover"]}],
+
+      "layer0.opacity": 0.0,
+      "layer1.opacity": 1.0
+   },
+   // Hover over row not selected, button dirty
+   {
+      "class": "close_button",
+      "attributes": ["dirty"],
+      "parents": [{"class": "tree_row", "attributes": ["hover"]}],
+
+      "layer0.opacity": 1.0,
+      "layer1.opacity": 0.0
+   },
+   // Dirty button, row selected
+   {
+      "class": "close_button",
+      "attributes": ["dirty"],
+      "parents": [{"class": "tree_row", "attributes": ["selected", "!hover"]}],
+
+      "layer0.opacity": 0.0,
+
+      "layer1.texture": "Theme - Praxis/assets/sidebar/file-dirty-selected.png",
+      "layer1.opacity": 1.0
+   },
+   // Hover over row selected, dirty button
+   {
+      "class": "close_button",
+      "attributes": ["dirty"],
+      "parents": [{"class": "tree_row", "attributes": ["selected", "hover"]}],
+
+      "layer0.opacity": 1.0,
+      "layer1.opacity": 0.0
+   },
+
+   // // // // // // // // // // //
+   // SIDEBAR - GENERAL FILE ICONS
+   // // // // // // // // // // //
+   // Sidebar group closed
+   {
+      "class": "disclosure_button_control",
+      "content_margin": [8, 8],
+
+      "layer0.texture": "Theme - Praxis/icons/folders/arrow-closed.png",
+      "layer0.opacity": 1.0,
+      "layer0.inner_margin": 0
+   },
+   {
+      "class": "disclosure_button_control",
+      "parents": [{"class": "tree_row", "attributes": ["hover"]}],
+
+      "layer0.texture": "Theme - Praxis/icons/folders/arrow-closed-active.png"
+   },
+   {
+      "class": "disclosure_button_control",
+      "parents": [{"class": "tree_row", "attributes": ["selected"]}],
+
+      "layer0.texture": "Theme - Praxis/icons/folders/arrow-closed-active.png"
+   },
+   // Sidebar group open
+   {
+      "class": "disclosure_button_control",
+      "attributes": ["expanded"],
+
+      "layer0.texture": "Theme - Praxis/icons/folders/arrow-open.png"
+   },
+   {
+      "class": "disclosure_button_control",
+      "attributes": ["expanded"],
+      "parents": [{"class": "tree_row", "attributes": ["hover"]}],
+
+      "layer0.texture": "Theme - Praxis/icons/folders/arrow-open-active.png"
+   },
+   {
+      "class": "disclosure_button_control",
+      "attributes": ["expanded"],
+      "parents": [{"class": "tree_row", "attributes": ["selected"]}],
+
+      "layer0.texture": "Theme - Praxis/icons/folders/arrow-open-active.png"
+   },
+
+   // // // // // // // //
+   // STANDARD TEXT BUTTONS
+   // // // // // // // //
+   // Default button state
+   {
+      "class": "button_control",
+
+      "min_size": [75, 0],
+      "content_margin": [6, 5, 6, 6],
+
+      "layer0.texture": "Theme - Praxis/assets/buttons/button.png",
+      "layer0.opacity": 1.0,
+      "layer0.inner_margin": 6,
+
+      "layer1.texture": "Theme - Praxis/assets/buttons/hover.png",
+      "layer1.opacity": 0.0,
+      "layer1.inner_margin": 6,
+
+      "layer2.texture": "Theme - Praxis/assets/buttons/pressed.png",
+      "layer2.opacity": 0.0,
+      "layer2.inner_margin": 6
+   },
+   // Pressed button state
+   {
+      "class": "button_control",
+      "attributes": ["pressed"],
+
+      "layer0.opacity": 0.0,
+      "layer2.opacity": 1.0
+   },
+   {
+      "class": "button_control",
+      "attributes": ["pressed", "hover"],
+
+      "layer0.opacity": 0.0,
+      "layer1.opacity": 0.0,
+      "layer2.opacity": 1.0
+   },
+   {
+      "class": "button_control",
+      "attributes": ["hover"],
+
+      "layer0.opacity": 0.0,
+      "layer1.opacity": 1.0
+   },
+
+   // // // // // // //
+   // TEXT INPUT FIELD
+   // // // // // // //
+   // Text input field item
+   {
+      "class": "text_line_control",
+
+      "content_margin": [3, 3, 3, 3],
+
+      "layer0.tint": [33, 33, 33],
+      "layer0.opacity": 1.0,
+      "layer0.inner_margin": 1
+   },
+
+   // Text input dropdown
+   {
+      "class": "dropdown_button_control",
+
+      "content_margin": [8, 8],
+
+      "layer0.texture": "Theme - Praxis/assets/text-field-list.png",
+      "layer0.opacity": 1.0,
+      "layer0.inner_margin": 4
+   },
+   {
+      "class": "dropdown_button_control",
+      "attributes": ["hover"],
+
+      "layer0.texture": "Theme - Praxis/assets/text-field-list-hover.png"
+   },
+   {
+      "class": "dropdown_button_control",
+      "attributes": ["pressed"],
+
+      "layer0.texture": "Theme - Praxis/assets/text-field-list-pressed.png"
+   },
+
+   // // // // // // //
+   // PANEL BACKGROUNDS
+   // // // // // // //
+   // Bottom panel background
+   {
+      "class": "panel_control",
+      "content_margin": [2, 3, 2, 2],
+
+      "layer0.texture": "Theme - Praxis/assets/panel/background.png",
+      "layer0.opacity": 1.0,
+      "layer0.inner_margin": [0, 1, 0, 0]
+   },
+   // Quick panel background
+   {
+      "class": "overlay_control",
+
+      "content_margin": [11, 8, 11, 17],
+
+      "layer0.texture": "Theme - Praxis/assets/quickpanel/background.png",
+      "layer0.opacity": 1.0,
+      "layer0.inner_margin": [12, 44, 12, 14],
+
+      "layer1.texture": "Theme - Praxis/assets/quickpanel/sections.png",
+      "layer1.opacity": 1.0,
+      "layer1.inner_margin": [12, 40, 12, 19]
+   },
+
+   // // // // //
+   // QUICK PANEL
+   // // // // //
+   {
+      "class": "quick_panel",
+
+      "row_padding": [6, 6],
+      "dark_content": true,
+
+      "layer0.tint": [33, 33, 33],
+      "layer0.opacity": 1.0
+   },
+   // Row
+   {
+      "class": "quick_panel_row",
+
+      "layer0.texture": "Theme - Praxis/assets/quickpanel/row.png",
+      "layer0.opacity": 1.0,
+      "layer0.inner_margin": 2
+   },
+   // Selected Row
+   {
+      "class": "quick_panel_row",
+      "attributes": ["selected"],
+
+      "layer0.texture": "Theme - Praxis/assets/quickpanel/row-selected.png"
+   },
+   // Standard Panel Label
+   {
+      "class": "quick_panel_label",
+
+      "fg": [105, 105, 99],
+      "match_fg": [207, 65, 116],
+
+      "selected_fg": [213, 213, 207],
+      "selected_match_fg": [220, 220, 214]
+   },
+   {
+      "class": "quick_panel_path_label",
+
+      "fg": [105, 105, 99],
+      "match_fg": [207, 65, 116],
+
+      "selected_fg": [213, 213, 207],
+      "selected_match_fg": [220, 220, 214]
+   },
+   {
+      "class": "quick_panel_score_label",
+
+      "fg": [207, 65, 116],
+      "selected_fg": [213, 213, 207]
+   },
+
+   // // // // // ///
+   // MINI QUICK PANEL
+   // // // // // ///
+   {
+      "class": "mini_quick_panel_row",
+
+      "layer0.texture": "Theme - Praxis/assets/quickpanel/row.png",
+      "layer0.opacity": 1.0,
+      "layer0.inner_margin": 2
+   },
+   {
+      "class": "mini_quick_panel_row",
+      "attributes": ["selected"],
+
+      "layer0.texture": "Theme - Praxis/assets/quickpanel/row-selected.png"
+   },
+
+   // // // // // // // // //
+   // CODE COMPLETION DROPDOWN
+   // // // // // // // // //
+   {
+      "class": "popup_control",
+
+      "content_margin": [6, 7],
+
+      "layer0.texture": "Theme - Praxis/assets/autocomplete-background.png",
+      "layer0.opacity": 1.0,
+      "layer0.inner_margin": 7
+   },
+   {
+      "class": "auto_complete",
+
+      "row_padding": [6, 4],
+      "dark_content": true
+   },
+   {
+      "class": "auto_complete_label",
+
+      "fg": [105, 105, 99],
+      "match_fg": [207, 65, 116],
+
+      "selected_fg": [213, 213, 207],
+      "selected_match_fg": [220, 220, 214]
+   },
+   {
+      "class": "table_row",
+
+      "layer0.texture": "Theme - Praxis/assets/quickpanel/row.png",
+      "layer0.opacity": 1.0,
+      "layer0.inner_margin": 2
+   },
+   {
+      "class": "table_row",
+      "attributes": ["selected"],
+
+      "layer0.texture": "Theme - Praxis/assets/quickpanel/row-selected.png",
+   },
+
+   // // // // // // // //
+   // BOTTOM PANEL BUTTONS
+   // // // // // // // //
+   {
+      "class": "icon_button_control",
+
+      "content_margin": [3, 3],
+
+      "layer0.texture": "Theme - Praxis/assets/buttons/group-middle.png",
+      "layer0.opacity": 1.0,
+      "layer0.inner_margin": 5
+   },
+   // Button group left
+   {
+      "class": "icon_button_control",
+      "attributes": ["left"],
+
+      "content_margin": [4, 3, 3, 3],
+
+      "layer0.texture": "Theme - Praxis/assets/buttons/group-left.png"
+   },
+   // Button group right
+   {
+      "class": "icon_button_control",
+      "attributes": ["right"],
+
+      "content_margin": [3, 3, 4, 3],
+
+      "layer0.texture": "Theme - Praxis/assets/buttons/group-right.png",
+   },
+   // Button single
+   {
+      "class": "icon_button_control",
+      "attributes": ["left", "right"],
+
+      "content_margin": [4, 3],
+
+      "layer0.texture": "Theme - Praxis/assets/buttons/button.png"
+   },
+   // Panel close button
+   {
+      "class": "panel_close_button",
+
+      "content_margin": [8, 12],
+
+      "layer0.texture": "Theme - Praxis/assets/panel/close.png",
+      "layer0.opacity": 1.0,
+
+      "layer1.texture": "Theme - Praxis/assets/panel/close-hover.png",
+      "layer1.opacity": 0.0,
+
+      "layer2.texture": "Theme - Praxis/assets/panel/close-pressed.png",
+      "layer2.opacity": 0.0
+   },
+   {
+      "class": "panel_close_button",
+      "attributes": ["hover"],
+
+      "layer0.opacity": 0.0,
+      "layer1.opacity": 1.0
+   },
+   {
+      "class": "panel_close_button",
+      "attributes": ["pressed"],
+
+      "layer0.opacity": 0.0,
+      "layer2.opacity": 1.0
+   },
+   {
+      "class": "panel_close_button",
+      "attributes": ["hover", "pressed"],
+
+      "layer0.opacity": 0.0,
+      "layer1.opacity": 0.0,
+      "layer2.opacity": 1.0
+   },
+
+   // // // // // // // // // // //
+   // BOTTOM PANEL ICONS - GROUP 1
+   // // // // // // // // // // //
+   // Regex search button
+   {
+      "class": "icon_regex",
+
+      "content_margin": 9,
+
+      "layer0.texture": "Theme - Praxis/icons/statusbar/regex-off.png",
+      "layer0.opacity": 1.0
+   },
+   {
+      "class": "icon_regex",
+      "parents": [{"class": "icon_button_control", "attributes": ["selected"]}],
+
+      "layer0.texture": "Theme - Praxis/icons/statusbar/regex-on.png"
+   },
+   // Case sensitive search button
+   {
+      "class": "icon_case",
+
+      "content_margin": 9,
+
+      "layer0.texture": "Theme - Praxis/icons/statusbar/case-off.png",
+      "layer0.opacity": 1.0
+   },
+   {
+      "class": "icon_case",
+      "parents": [{"class": "icon_button_control", "attributes": ["selected"]}],
+
+      "layer0.texture": "Theme - Praxis/icons/statusbar/case-on.png"
+   },
+   // Match Praxis word search button
+   {
+      "class": "icon_Praxis_word",
+
+      "content_margin": 9,
+
+      "layer0.texture": "Theme - Praxis/icons/statusbar/word-off.png",
+      "layer0.opacity": 1.0
+   },
+   {
+      "class": "icon_Praxis_word",
+      "parents": [{"class": "icon_button_control", "attributes": ["selected"]}],
+
+      "layer0.texture": "Theme - Praxis/icons/statusbar/word-on.png"
+   },
+
+   // // // // // // // // // // // // // // // // // // //
+   // BOTTOM PANEL ICONS - GROUP 1 (EXTENDED: FIND IN FILES)
+   // // // // // // // // // // // // // // // // // // //
+   // Show search context button
+   {
+      "class": "icon_context",
+
+      "content_margin": 9,
+
+      "layer0.texture": "Theme - Praxis/icons/statusbar/context-off.png",
+      "layer0.opacity": 1.0
+   },
+   {
+      "class": "icon_context",
+      "parents": [{"class": "icon_button_control", "attributes": ["selected"]}],
+
+      "layer0.texture": "Theme - Praxis/icons/statusbar/context-on.png"
+   },
+   // Use search buffer
+   {
+      "class": "icon_use_buffer",
+
+      "content_margin": 9,
+
+      "layer0.texture": "Theme - Praxis/icons/statusbar/buffer-off.png",
+      "layer0.opacity": 1.0
+   },
+   {
+      "class": "icon_use_buffer",
+      "parents": [{"class": "icon_button_control", "attributes": ["selected"]}],
+
+      "layer0.texture": "Theme - Praxis/icons/statusbar/buffer-on.png"
+   },
+
+   // // // // // // // // // // //
+   // BOTTOM PANEL ICONS - GROUP 2
+   // // // // // // // // // // //
+   // Reverse search direction button
+   {
+      "class": "icon_reverse",
+
+      "content_margin": 9,
+
+      "layer0.texture": "Theme - Praxis/icons/statusbar/reverse-off.png",
+      "layer0.opacity": 1.0
+   },
+   {
+      "class": "icon_reverse",
+      "parents": [{"class": "icon_button_control", "attributes": ["selected"]}],
+
+      "layer0.texture": "Theme - Praxis/icons/statusbar/reverse-on.png"
+   },
+   // Search wrap button
+   {
+      "class": "icon_wrap",
+
+      "content_margin": 9,
+
+      "layer0.texture": "Theme - Praxis/icons/statusbar/wrap-off.png",
+      "layer0.opacity": 1.0
+   },
+   {
+      "class": "icon_wrap",
+      "parents": [{"class": "icon_button_control", "attributes": ["selected"]}],
+
+      "layer0.texture": "Theme - Praxis/icons/statusbar/wrap-on.png"
+   },
+   // Search in selection button
+   {
+      "class": "icon_in_selection",
+
+      "content_margin": 9,
+
+      "layer0.texture": "Theme - Praxis/icons/statusbar/selection-off.png",
+      "layer0.opacity": 1.0
+   },
+   {
+      "class": "icon_in_selection",
+      "parents": [{"class": "icon_button_control", "attributes": ["selected"]}],
+
+      "layer0.texture": "Theme - Praxis/icons/statusbar/selection-on.png"
+   },
+
+   // // // // // // // // // // //
+   // BOTTOM PANEL ICONS - GROUP 3
+   // // // // // // // // // // //
+   // Preserve case button
+   {
+      "class": "icon_preserve_case",
+
+      "content_margin": 9,
+
+      "layer0.texture": "Theme - Praxis/icons/statusbar/preserve-off.png",
+      "layer0.opacity": 1.0
+   },
+   {
+      "class": "icon_preserve_case",
+      "parents": [{"class": "icon_button_control", "attributes": ["selected"]}],
+
+      "layer0.texture": "Theme - Praxis/icons/statusbar/preserve-on.png"
+   },
+
+   // // // // // // // // // // //
+   // BOTTOM PANEL ICONS - GROUP 4
+   // // // // // // // // // // //
+   // Highlight results button
+   {
+      "class": "icon_highlight",
+
+      "content_margin": 9,
+
+      "layer0.texture": "Theme - Praxis/icons/statusbar/highlight-off.png",
+      "layer0.opacity": 1.0
+   },
+   {
+      "class": "icon_highlight",
+      "parents": [{"class": "icon_button_control", "attributes": ["selected"]}],
+
+      "layer0.texture": "Theme - Praxis/icons/statusbar/highlight-on.png"
+   },
+
+   // // // // //
+   // FILE ICONS
+   // // // // //
+   {
+      "class": "icon_file_type",
+
+      "content_margin": [8, 8],
+
+      // layer0.texture is filled in by code with the relevant icon name
+      "layer0.opacity": 0.78,
+   },
+   {
+      "class": "icon_file_type",
+      "parents": [{"class": "tree_row", "attributes": ["hover"]}],
+
+      "layer0.opacity": 1.0
+   },
+   {
+      "class": "icon_file_type",
+      "parents": [{"class": "tree_row", "attributes": ["selected"]}],
+
+      "layer0.opacity": 1.0
+   },
+
+   // // // // // // // //
+   // CLOSED FOLDER ICONS
+   // // // // // // // //
+   {
+      "class": "icon_folder",
+
+      "content_margin": [8, 8],
+
+      "layer0.texture": "Theme - Praxis/icons/folders/closed.png",
+      "layer0.opacity": 1.0,
+      "layer0.inner_margin": 0
+   },
+   {
+      "class": "icon_folder",
+      "parents": [{"class": "tree_row", "attributes": ["hover"]}],
+
+      "layer0.texture": "Theme - Praxis/icons/folders/closed-active.png"
+   },
+   {
+      "class": "icon_folder",
+      "parents": [{"class": "tree_row", "attributes": ["selected"]}],
+
+      "layer0.texture": "Theme - Praxis/icons/folders/closed-active.png"
+   },
+
+   // // // // // // //
+   // OPEN FOLDER ICONS
+   // // // // // // //
+   {
+      "class": "icon_folder",
+      "parents": [{"class": "tree_row", "attributes": ["expanded"]}],
+
+      "layer0.texture": "Theme - Praxis/icons/folders/open.png"
+   },
+   {
+      "class": "icon_folder",
+      "parents": [{"class": "tree_row", "attributes": ["expanded", "hover"]}],
+
+      "layer0.texture": "Theme - Praxis/icons/folders/open-active.png"
+   },
+   {
+      "class": "icon_folder",
+      "parents": [{"class": "tree_row", "attributes": ["expanded", "selected"]}],
+
+      "layer0.texture": "Theme - Praxis/icons/folders/open-active.png"
+   },
+
+   // // // // // // // // //
+   // DUPLICATE FOLDER ICONS
+   // // // // // // // // //
+   {
+      "class": "icon_folder_dup",
+
+      "content_margin": [8, 8],
+
+      "layer0.texture": "Theme - Praxis/icons/folders/dup.png",
+      "layer0.opacity": 1.0,
+      "layer0.inner_margin": 0
+   },
+   {
+      "class": "icon_folder_dup",
+      "parents": [{"class": "tree_row", "attributes": ["hover"]}],
+
+      "layer0.texture": "Theme - Praxis/icons/folders/dup-active.png"
+   },
+   {
+      "class": "icon_folder_dup",
+      "parents": [{"class": "tree_row", "attributes": ["selected"]}],
+
+      "layer0.texture": "Theme - Praxis/icons/folders/dup-active.png"
+   },
+
+   // // // // // // // //
+   // LOADING FOLDER ICON
+   // // // // // // // //
+   {
+      "class": "icon_folder_loading",
+
+      "content_margin": [8, 8],
+
+      "layer0.texture":
+      {
+         "keyframes":
+         [
+            "Theme - Praxis/icons/spinner/spinner7.png",
+            "Theme - Praxis/icons/spinner/spinner6.png",
+            "Theme - Praxis/icons/spinner/spinner5.png",
+            "Theme - Praxis/icons/spinner/spinner4.png",
+            "Theme - Praxis/icons/spinner/spinner3.png",
+            "Theme - Praxis/icons/spinner/spinner2.png",
+            "Theme - Praxis/icons/spinner/spinner1.png",
+            "Theme - Praxis/icons/spinner/spinner.png",
+         ],
+         "loop": true,
+         "frame_time": 0.075,
+      },
+      "layer0.opacity": 1.0
+   }
+]
