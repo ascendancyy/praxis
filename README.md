@@ -2,6 +2,8 @@
 
 Built from [Soda Theme](http://buymeasoda.com/) by Ian Hill. Although at this point Praxis really isn't related, like we're not even cousins. That makes it okay, right?
 
+![Praxis](https://raw.githubusercontent.com/ascendancyy/praxis/gh/images/screenshots/praxis_transparent.png)
+
 ## Installation
 
 ### Using Package Control
