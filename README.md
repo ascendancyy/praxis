@@ -42,13 +42,13 @@ While inside the `Packages` directory, clone the theme repository using the comm
 
 ### Alternate Tab Styles
 
-There are two available tab styles in Praxis.
-
-Square tabs are used by default. If you'd prefer to use a curved tab style, add the following setting to your `Settings - User` file:
-
-    "praxis_round_tabs": true
+There are two available tab styles in Praxis:
 
 ![Praxis Tab Styles](https://raw.githubusercontent.com/ascendancyy/praxis/gh/images/screenshots/tab_preview.png)
+
+Square tabs are used by default. You can enabled curved tabs by adding the following setting to your `Settings - User` file:
+
+    "praxis_round_tabs": true
 
 ## License
 
