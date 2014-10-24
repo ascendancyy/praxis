@@ -6,15 +6,9 @@ Built from [Soda Theme](http://buymeasoda.com/) by Ian Hill. Although at this po
 
 ## Installation
 
-### Using Package Control
-
-Coming soon (I hope).
+If you're going to install with Git or manually you will need to open up your `Packages` directory by going to: `Preferences -> Browse Packages...`.
 
 ### Using Git
-
-If you're a git user, you can install the theme and keep up to date by cloning the repo directly into your `Packages` directory.
-
-You can locate your `Packages` directory by going to: `Preferences -> Browse Packages...`.
 
 While inside the `Packages` directory, clone the theme repository using the command below:
 
@@ -22,10 +16,11 @@ While inside the `Packages` directory, clone the theme repository using the comm
 
 ### Manually
 
-1. Download the files using the GitHub .zip download option
-2. Unzip the files and rename the folder to `Theme - Praxis`
-3. Find your `Packages` directory using the menu item  `Preferences -> Browse Packages...`
-4. Copy the folder into your Sublime Text `Packages` directory
+Download the .zip file from GitHub and extract the folder into your `Packages` directory, then rename the extracted folder to: `Theme - Praxis`
+
+### Using Package Control
+
+If you're a [package control](http://wbond.net/sublime_packages/package_control) type of person, you can easily install Praxis via the `Package Control: Install Package` command. Just search for `Theme - Praxis` in the packages list.
 
 ## Activating the theme
 
