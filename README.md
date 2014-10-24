@@ -47,4 +47,4 @@ Square tabs are used by default. You can enabled curved tabs by adding the follo
 
 ## License
 
-And registration please.
+This work is licensed under the [Creative Commons Attribution-ShareAlike 3.0 License](http://creativecommons.org/licenses/by-sa/3.0/). You are free to share and remix the theme, however please abide by the license terms when doing so.
