@@ -1135,9 +1135,9 @@
 
       "layer0.texture": "Theme - Praxis/icons/statusbar/case-on.png"
    },
-   // Match Praxis word search button
+   // Match whole word search button
    {
-      "class": "icon_Praxis_word",
+      "class": "icon_whole_word",
 
       "content_margin": 9,
 
@@ -1145,7 +1145,7 @@
       "layer0.opacity": 1.0
    },
    {
-      "class": "icon_Praxis_word",
+      "class": "icon_whole_word",
       "parents": [{"class": "icon_button_control", "attributes": ["selected"]}],
 
       "layer0.texture": "Theme - Praxis/icons/statusbar/word-on.png"
