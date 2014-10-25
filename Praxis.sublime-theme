@@ -15,7 +15,7 @@
 
       "layer0.texture": "Theme - Praxis/assets/tabs/background.png",
       "layer0.opacity": 1.0,
-      "layer0.inner_margin": 0  // No stretch area
+      "layer0.inner_margin": [0, 0, 0, 1]  // No stretch area
    },
    // Set aside space for the tab scrolling icons
    {
@@ -54,7 +54,7 @@
       "class": "tab_control",
       "attributes": ["hover"],
 
-      "layer0.texture": "Theme - Praxis/assets/tabs/hover.png"
+      "layer0.texture": "Theme - Praxis/assets/tabs/inactive.png"
    },
    // Tab selected state
    {
@@ -211,13 +211,13 @@
       "class": "tab_label",
       "parents": [{"class": "tab_control", "attributes": ["hover"]}],
 
-      "fg": [213, 213, 207],
+      "fg": [181, 181, 176],
    },
    {
       "class": "tab_label",
       "parents": [{"class": "tab_control", "attributes": ["selected"]}],
 
-      "fg": [213, 213, 207],
+      "fg": [181, 181, 176],
    },
    // Highlight dirty tabs
    {
@@ -225,21 +225,21 @@
       "settings": ["highlight_modified_tabs"],
       "parents": [{"class": "tab_control", "attributes": ["dirty"]}],
 
-      "fg": [204, 179, 116],
+      "fg": [219, 147, 83],
    },
    {
       "class": "tab_label",
       "settings": ["highlight_modified_tabs"],
       "parents": [{"class": "tab_control", "attributes": ["dirty", "hover"]}],
 
-      "fg": [224, 191, 105],
+      "fg": [235, 163, 101],
    },
    {
       "class": "tab_label",
       "settings": ["highlight_modified_tabs"],
       "parents": [{"class": "tab_control", "attributes": ["dirty", "selected"]}],
 
-      "fg": [224, 191, 105],
+      "fg": [235, 163, 101],
    },
    // Previewed Tab
    {
@@ -465,7 +465,7 @@
       "class": "grid_layout_control",
 
       "border_size": 1,
-      "border_color": [225, 85, 137]
+      "border_color": [207, 64, 116]
    },
 
    // // // //
@@ -517,7 +517,7 @@
 
       "content_margin": [0, 6],
 
-      "layer0.tint": [59, 59, 59],
+      "layer0.tint": [54, 54, 54],
       "layer0.opacity": 1.0
    },
 
@@ -527,17 +527,21 @@
    {
       "class": "label_control",
 
-      "color": [213, 213, 207]
+      "color": [181, 181, 176]
    },
    // Text field labels
    {
       "class": "label_control",
-      "parents": [{"class": "panel_control"}]
+      "parents": [{"class": "panel_control"}],
+
+      "color": [181, 181, 176]
    },
    // Button labels
    {
       "class": "label_control",
-      "parents": [{"class": "button_control"}]
+      "parents": [{"class": "button_control"}],
+
+      "color": [219, 219, 213]
    },
 
    // // // //
@@ -548,14 +552,14 @@
 
       "content_margin": [4, 4],
 
-      "layer0.tint": [207, 65, 116],
+      "layer0.tint": [207, 64, 116],
       "layer0.opacity": 1.0,
    },
    // Tooltip content
    {
       "class": "tool_tip_label_control",
 
-      "color": [213, 213, 207]
+      "color": [219, 219, 213]
    },
 
    // // // // //
@@ -581,7 +585,7 @@
       "class": "label_control",
       "parents": [{"class": "status_bar"}],
 
-      "color": [213, 213, 207]
+      "color": [181, 181, 176]
    },
 
    // // // //
@@ -611,7 +615,7 @@
    {
       "class": "tree_row",
 
-      "layer0.tint": [207, 65, 116],
+      "layer0.tint": [207, 64, 116],
       "layer0.opacity": 0.0,
    },
    // Sidebar row selected
@@ -627,7 +631,7 @@
 
       "font.bold": true,
 
-      "color": [213, 213, 207],
+      "color": [181, 181, 176],
    },
    // Sidebar entry
    {
@@ -636,26 +640,26 @@
       "font.bold": false,
       "font.italic": false,
 
-      "color": [176, 176, 170]
+      "color": [181, 181, 176]
    },
    {
       "class": "sidebar_label",
       "parents": [{"class": "tree_row", "attributes": ["hover"]}],
 
-      "color": [213, 213, 207]
+      "color": [219, 219, 213]
    },
    {
       "class": "sidebar_label",
       "parents": [{"class": "tree_row", "attributes": ["selected"]}],
 
-      "color": [213, 213, 207]
+      "color": [219, 219, 213]
    },
    // Sidebar folder entry
    {
       "class": "sidebar_label",
       "parents": [{"class": "tree_row", "attributes": ["expandable"]}],
 
-      "color": [189, 189, 183]
+      "color": [181, 181, 176]
    },
    {
       "class": "sidebar_label",
@@ -668,13 +672,13 @@
       "class": "sidebar_label",
       "parents": [{"class": "tree_row", "attributes": ["expandable", "hover"]}],
 
-      "color": [213, 213, 207]
+      "color": [219, 219, 213]
    },
    {
       "class": "sidebar_label",
       "parents": [{"class": "tree_row", "attributes": ["expandable", "selected"]}],
 
-      "color": [213, 213, 207]
+      "color": [219, 219, 213]
    },
    // Sidebar entry transient
    {
@@ -957,25 +961,25 @@
       "class": "quick_panel_label",
 
       "fg": [105, 105, 99],
-      "match_fg": [207, 65, 116],
+      "match_fg": [207, 64, 116],
 
-      "selected_fg": [213, 213, 207],
-      "selected_match_fg": [220, 220, 214]
+      "selected_fg": [181, 181, 176],
+      "selected_match_fg": [219, 219, 213]
    },
    {
       "class": "quick_panel_path_label",
 
       "fg": [105, 105, 99],
-      "match_fg": [207, 65, 116],
+      "match_fg": [207, 64, 116],
 
-      "selected_fg": [213, 213, 207],
-      "selected_match_fg": [220, 220, 214]
+      "selected_fg": [181, 181, 176],
+      "selected_match_fg": [219, 219, 213]
    },
    {
       "class": "quick_panel_score_label",
 
-      "fg": [207, 65, 116],
-      "selected_fg": [213, 213, 207]
+      "fg": [207, 64, 116],
+      "selected_fg": [181, 181, 176]
    },
 
    // // // // // ///
@@ -1017,10 +1021,10 @@
       "class": "auto_complete_label",
 
       "fg": [105, 105, 99],
-      "match_fg": [207, 65, 116],
+      "match_fg": [207, 64, 116],
 
-      "selected_fg": [213, 213, 207],
-      "selected_match_fg": [220, 220, 214]
+      "selected_fg": [181, 181, 176],
+      "selected_match_fg": [219, 219, 213]
    },
    {
       "class": "table_row",
