@@ -107,7 +107,7 @@
       "settings": ["praxis_round_tabs"],
       "attributes": ["hover"],
 
-      "layer0.texture": "Theme - Praxis/assets/tabs/classic/hover.png"
+      "layer0.texture": "Theme - Praxis/assets/tabs/classic/inactive.png"
    },
    // Tab active state
    {
