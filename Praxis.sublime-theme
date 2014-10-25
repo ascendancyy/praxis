@@ -49,13 +49,6 @@
 
       "content_margin": [15, 0, 12, 1]
    },
-   // Tab hover state
-   {
-      "class": "tab_control",
-      "attributes": ["hover"],
-
-      "layer0.texture": "Theme - Praxis/assets/tabs/inactive.png"
-   },
    // Tab selected state
    {
       "class": "tab_control",
@@ -100,14 +93,6 @@
       "settings": ["praxis_round_tabs", "show_tab_close_buttons"],
 
       "content_margin": [20, 10, 17, 4]
-   },
-   // Tab hover state
-   {
-      "class": "tab_control",
-      "settings": ["praxis_round_tabs"],
-      "attributes": ["hover"],
-
-      "layer0.texture": "Theme - Praxis/assets/tabs/classic/inactive.png"
    },
    // Tab active state
    {
