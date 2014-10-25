@@ -20,7 +20,7 @@ Download the .zip file from GitHub and extract the folder into your `Packages` d
 
 ### Using Package Control
 
-If you're a [package control](http://wbond.net/sublime_packages/package_control) type of person, you can easily install Praxis via the `Package Control: Install Package` command. Just search for `Theme - Praxis` in the packages list.
+If you're a [Package Control](http://wbond.net/sublime_packages/package_control) type of person, you can easily install Praxis via the `Package Control: Install Package` command. Just search for `Theme - Praxis` in the packages list.
 
 ## Activating the theme
 
@@ -34,6 +34,12 @@ If you're a [package control](http://wbond.net/sublime_packages/package_control)
     }
 
 ## Additional Features
+
+### Color scheme
+
+Praxis includes a leaner and modified version of [Monokai Extended](https://github.com/jonschlinkert/sublime-monokai-extended).
+
+You can enable the color scheme by going to `Preferences -> Color Scheme -> Theme - Praxis` and clicking on `Monokai (Praxis)`
 
 ### Alternate Tab Styles
 
